@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user = User.firsti
 
     if @article.save
       flash[:success] = 'Ze Article was Created'
